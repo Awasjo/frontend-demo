@@ -1,0 +1,31 @@
+functionsDirectory = "/Users/awasjo/Documents/GitHub Projects/AstraVita/AstraVita-MERN-Project/frontend demo/netlify/functions"
+functionsDirectoryOrigin = "ui"
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/awasjo/Documents/GitHub Projects/AstraVita/AstraVita-MERN-Project/frontend demo/build"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "/Users/awasjo/Documents/GitHub Projects/AstraVita/AstraVita-MERN-Project/frontend demo"
+command = "npm run build"
+functions = "/Users/awasjo/Documents/GitHub Projects/AstraVita/AstraVita-MERN-Project/frontend demo/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
