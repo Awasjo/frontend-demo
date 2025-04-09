@@ -33,8 +33,8 @@ const App = () => {
 
   return (
     <>
-      {!shouldHideNavbar && <Navbar />}
       <DemoBanner />
+      {!shouldHideNavbar && <Navbar />}
       {/* Global toast configuration for the app */}
       <ToastContainer
         position="top-right"
