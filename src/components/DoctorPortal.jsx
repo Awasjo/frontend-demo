@@ -71,38 +71,37 @@ const DoctorPortal = () => {
     setSortDirection(prev => prev === 'asc' ? 'desc' : 'asc');
   };
 
-
   return (
-    <div className="min-h-screen bg-[#F0F2F5] p-6">
-      {showDemoHint && (
-        <div className="bg-blue-100 border-l-4 border-blue-500 p-4 mb-6 relative">
-          <button 
-            className="absolute top-2 right-2 text-blue-500"
-            onClick={() => setShowDemoHint(false)}
-          >
-            ×
-          </button>
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <svg className="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clipRule="evenodd" />
-              </svg>
-            </div>
-            <div className="ml-3">
-              <p className="text-sm text-blue-800">
-                <span className="font-bold">DEMO MODE:</span> This page shows your patients from sample data.
-              </p>
-              <ul className="mt-2 list-disc list-inside text-sm text-blue-700">
-                <li>Click on a patient to view their test results</li>
-                <li>In demo mode, added patients will only persist for this session</li>
-                <li>"Add Patient" will simulate adding a new patient relationship</li>
-              </ul>
+    <div className="h-full bg-[#F0F2F5] p-6">
+      <div className="max-w-[1200px] mx-auto h-[calc(100vh-3rem)] md:h-[calc(100vh-3.5rem)] overflow-y-auto">
+        {showDemoHint && (
+          <div className="bg-blue-100 border-l-4 border-blue-500 p-4 mb-6 relative">
+            <button 
+              className="absolute top-2 right-2 text-blue-500"
+              onClick={() => setShowDemoHint(false)}
+            >
+              ×
+            </button>
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <p className="text-sm text-blue-800">
+                  <span className="font-bold">DEMO MODE:</span> This page shows your patients from sample data.
+                </p>
+                <ul className="mt-2 list-disc list-inside text-sm text-blue-700">
+                  <li>Click on a patient to view their test results</li>
+                  <li>In demo mode, added patients will only persist for this session</li>
+                  <li>"Add Patient" will simulate adding a new patient relationship</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           {/* Title and Add Patient Button */}
           <h1 className="text-3xl font-bold text-[#30336B] mb-4 md:mb-0">{doctor.firstName} {doctor.lastName}'s Patients</h1>
@@ -189,6 +188,7 @@ const DoctorPortal = () => {
             />
         </div>
       </div>
+    </div>
   );
 };
 
