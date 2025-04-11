@@ -6,7 +6,7 @@ const DemoBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-yellow-100 border-b border-yellow-300 text-center p-1 sm:p-2 w-full relative">
+    <div className="bg-yellow-100 border-b border-yellow-300 text-center p-1 sm:p-2 w-full relative z-50">
       <p className="text-xs sm:text-sm md:text-base px-2 sm:px-4 py-1 pr-8">
         This is a demonstration version of AstraVita. For the complete application, visit our
         <a 
